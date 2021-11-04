@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/postsFragment">
+
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="xyz.hirantha.testapplication.ui.posts.PostsFragment"
+        android:label="PostsFragment" >
+        <action
+            android:id="@+id/action_postsFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+        <argument
+            android:name="postId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="xyz.hirantha.testapplication.ui.post.PostFragment"
+        android:label="PostFragment" />
+</navigation>
